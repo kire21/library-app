@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Library App</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="flex">
+      <div class="logo">
+        <img class="img--logo" src="./images/logo.png" alt="" />
+      </div>
+      <div>
+        <button class="btn btn__open--modal" type="submit">Add Book</button>
+      </div>
+    </header>
+
+    <!-- Welcome Section -->
+    <section class="welcome">
+      <h1 class="welcome__heading">Hi, Welcome to Library App</h1>
+      <p>Explore the app, Add your book.</p>
+    </section>
+
+    <section class="your__library hidden">
+      <h1 class="welcome__heading">This is your library</h1>
+    </section>
+
+    <!-- Quote Section -->
+    <section class="quote">
+      <p class="quote--text">
+        "If you don’t like to read, you haven’t found the right book."
+        <span>- J.K. Rowling</span>
+      </p>
+    </section>
+
+    <!-- Cards Section -->
+    <section class="cards grid hidden">
+      <!-- <div class="card__title">
+        <h2 class="title">Title:</h2>
+        <h2 class="book__title">Hobbit</h2>
+      </div>
+      <h3 class="author">
+        Author: <span class="author__name">J. R. R. Tolkien</span>
+      </h3>
+      <h3>Pages: <span class="num__pages">295</span></h3>
+      <div class="btn__read">
+        <button class="input__book--status btn">${book.status}</button>
+      </div> -->
+    </section>
+
+    <!-- Modal Window -->
+    <div class="modal hidden">
+      <button class="close__modal">&times;</button>
+      <h1>Add New Book</h1>
+      <p>Let's add your new book!</p>
+      <form class="book__info">
+        <input
+          type="text"
+          name="title"
+          class="input input__book--title"
+          placeholder="Title"
+        />
+        <input
+          type="text"
+          name="author"
+          class="input input__book--author"
+          placeholder="Author"
+        />
+        <input
+          type="number"
+          name="pages"
+          class="input input__book--pages"
+          placeholder="Number of pages"
+        />
+        <input
+          type="button"
+          name="pages"
+          class="input input__book--status grow active"
+          placeholder="Number of pages"
+          value="Not Read"
+        />
+        <button class="btn btn__new--book" type="submit">Add New Book</button>
+      </form>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay hidden"></div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
